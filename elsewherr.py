@@ -1,4 +1,5 @@
 import argparse
+from gotify import Gotify
 import logging
 import os
 import re
@@ -15,6 +16,7 @@ def get_args():
 
 def setup(args):
     global config
+    global gotify
     global logger
     
     dir = os.path.dirname(os.path.abspath(__file__))
@@ -38,6 +40,9 @@ def setup(args):
 
     tmdb = TMDb()
     tmdb.api_key = config['tmdb']['api_key']
+
+    if config.get('gotify') and config['gotify'].get('enabled'):
+        gotify = Gotify(base_url=config['gotify']['url'], app_token=config['gotify']['token'])
 
 def get_tag_label_for_provider(provider_name):
     return f"{config['prefix']}{re.sub('[^A-Za-z0-9]+', '', provider_name)}".lower()
@@ -72,8 +77,17 @@ def process_radarr():
                     logger.debug('Skipping provider: %s' % provider_name)
 
             logger.debug(f"Resultant Tags: {', '.join(map(lambda x: tags_id_to_label.get(x), tags_list)) if len(tags_list) > 0 else 'None'}")
-            movie['tags'] = tags_list
-            radarr.upd_movie(movie)
+            
+            if set(movie['tags']) != set(tags_list):
+                removed_tags = list(map(lambda x: tags_id_to_label.get(x), set(movie['tags']) - set(tags_list)))
+                added_tags = list(map(lambda x: tags_id_to_label.get(x), set(tags_list) - set(movie['tags'])))
+                
+                message = f"{'Removed tags: ' + ','.join(removed_tags) + ' ' if len(removed_tags) > 0 else ''}"
+                message += f"{'Added tags: ' + ','.join(added_tags) if len(added_tags) > 0 else ''}"
+                send_notification(f"{movie['title']}", message)
+            
+                movie['tags'] = tags_list
+                radarr.upd_movie(movie)
         except Exception as e:
             logger.error(e)
             logger.error('Failed to process movie %s' % movie['title'])
@@ -81,6 +95,7 @@ def process_radarr():
 
     logger.debug('--------------------------------------------------')
     logger.info('Processed %i movies.' % len(movies))
+    return len(movies)
 
 def process_sonarr():
     sonarr = SonarrAPI(host_url=config['sonarr']['url'], api_key=config['sonarr']['api_key'])
@@ -117,8 +132,18 @@ def process_sonarr():
                     logger.debug('Skipping provider: %s' % provider_name)
 
             logger.debug(f"Resultant Tags: {', '.join(map(lambda x: tags_id_to_label.get(x), tags_list)) if len(tags_list) > 0 else 'None'}")
-            series['tags'] = tags_list
-            sonarr.upd_series(series)
+
+            if set(series['tags']) != set(tags_list):
+                removed_tags = list(map(lambda x: tags_id_to_label.get(x), set(series['tags']) - set(tags_list)))
+                added_tags = list(map(lambda x: tags_id_to_label.get(x), set(tags_list) - set(series['tags'])))
+                
+                message = f"{'Removed tags: ' + ','.join(removed_tags) + ' ' if len(removed_tags) > 0 else ''}"
+                message += f"{'Added tags: ' + ','.join(added_tags) if len(added_tags) > 0 else ''}"
+                send_notification(f"{series['title']}", message)
+
+                series['tags'] = tags_list
+                sonarr.upd_series(series)
+
         except Exception as e:
             logger.error(e)
             logger.error('Failed to process series %s' % series['title'])
@@ -126,15 +151,26 @@ def process_sonarr():
 
     logger.debug('--------------------------------------------------')
     logger.info('Processed %i series.' % len(all_series))
+    return len(all_series)
+
+def send_notification(title, message):
+    if gotify:
+        gotify.create_message(message, title=title, priority=1)
 
 def execute():
     setup(get_args())
-    
+    summaries = []
+
     if config['radarr']['enabled']:
-        process_radarr()
-    
+        count = process_radarr()
+        summaries.append(f"{count} movies")
+
     if config['sonarr']['enabled']:
-        process_sonarr()
+        count = process_sonarr()
+        summaries.append(f"{count} series")
+
+    if len(summaries) > 0:
+        send_notification('Execution Completed', f"Processed {' & '.join(summaries)}")
 
     logger.info('Elsewherr completed.')
 
