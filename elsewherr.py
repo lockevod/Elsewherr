@@ -121,7 +121,7 @@ def process_sonarr():
 
             tags_list = list(filter(lambda x: not tags_id_to_label.get(x).startswith(config['prefix'].lower()), series['tags']))
 
-            providers = TV().watch_providers(tmdb_id)['results'][config['tmdb']['region']].get('flatrate', [])
+            providers = TV().watch_providers(tmdb_id)['results'].get(config['tmdb']['region'], {}).get('flatrate', [])
             for provider in providers:
                 provider_name = provider['provider_name']
 
