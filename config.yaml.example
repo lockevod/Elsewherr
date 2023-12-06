@@ -1,0 +1,28 @@
+tmdb:
+  api_key: XXXXXX
+  region: ES
+radarr:
+  enabled: true
+  url: http://XXXXXX:7878
+  api_key: XXXXXX
+  monitor: true
+sonarr:
+  enabled: false
+  url: http://XXXXX5:8989
+  api_key: XXXXXX
+  monitor: true
+gotify:
+  enabled: false
+  url: http://localhost
+  token: xxx
+providers:
+  - Netflix
+  - Disney Plus
+  - Movistar Plus
+  - HBO Max
+  - Apple TV Plus
+  - Amazon Prime Video
+prefix: Stream-
+
+
+
