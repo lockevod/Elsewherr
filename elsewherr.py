@@ -40,10 +40,13 @@ def setup(args):
 
     tmdb = TMDb()
     tmdb.api_key = config['tmdb']['api_key']
+    #tmdb.debug = True
 
     if config.get('gotify') and config['gotify'].get('enabled'):
         gotify = Gotify(base_url=config['gotify']['url'], app_token=config['gotify']['token'])
-
+    else:
+        gotify = None
+        
 def get_tag_label_for_provider(provider_name):
     return f"{config['prefix']}{re.sub('[^A-Za-z0-9]+', '', provider_name)}".lower()
 
@@ -65,11 +68,19 @@ def process_radarr():
             logger.debug('Movie: %s' % movie['title'])
             logger.debug(f"Existing Tags: {', '.join(map(lambda x: tags_id_to_label.get(x), movie['tags'])) if len(movie['tags']) > 0 else 'None'}")
             tags_list = list(filter(lambda x: not tags_id_to_label.get(x).startswith(config['prefix'].lower()), movie['tags']))
+            movietmdb=Movie()
+            
+            #providers = movietmdb.watch_providers(movie['tmdbId'])['results']
+            #providers = Movie().watch_providers(movie['tmdbId'])['results'].get(config['tmdb']['region'], {}).get('flatrate', [])
 
-            providers = Movie().watch_providers(movie['tmdbId'])['results'].get(config['tmdb']['region'], {}).get('flatrate', [])
+            #providers = movietmdb.watch_providers(movie['tmdbId'])['results']
+            providers = movietmdb.watch_providers(movie['tmdbId'])['results']._json[config['tmdb']['region']]['flatrate']
+
+           # if (providers):
+            #    providers=providers._json['ES']['flatrate']
             for provider in providers:
                 provider_name = provider['provider_name']
-
+                logger.debug('Provider: %s' % provider_name)
                 if provider_name in config['providers']:
                     logger.debug('Adding provider: %s' % provider_name)
                     tags_list.append(tags_label_to_id.get(get_tag_label_for_provider(provider_name)))
@@ -87,7 +98,12 @@ def process_radarr():
                 send_notification(f"{movie['title']}", message)
             
                 movie['tags'] = tags_list
+                if (config['radarr']['monitor']):
+                    movie['monitored'] = False
                 radarr.upd_movie(movie)
+        except KeyError:
+            logger.debug('Movie %s doesnt have Flatrate' % movie['title'])
+            continue
         except Exception as e:
             logger.error(e)
             logger.error('Failed to process movie %s' % movie['title'])

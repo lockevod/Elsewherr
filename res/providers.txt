@@ -1,10 +1,15 @@
 7plus
 ABC
 ABC iview
+AD tv
+AMC
+AMC Plus Apple TV Channel 
 AMC on Demand
 AMC+
 AMC+ Amazon Channel
 AMC+ Roku Premium Channel
+ARD Mediathek
+ARD Plus
 ARROW
 AVA BGB
 AVA CSAL
@@ -16,18 +21,22 @@ Acorn TV
 AcornTV Amazon Channel
 Action Max Amazon Channel
 Alamo on Demand
-All 4
+Allente
 Alleskino
 Alt Balaji
 Amazon Arthaus Channel
 Amazon Prime Video
 Amazon Video
+Amazon miniTV
 Amediateka
-Animax Plus Amazon Channel
+Angel Studios
+Animation Digital Network Amazon Channel
 Anime Digital Networks
+Anime Generation Amazon Channel
 Aniverse Amazon Channel
+Apollo
+Apple TV
 Apple TV Plus
-Apple iTunes
 Argo
 Arrow Video Amazon Channel
 Arte
@@ -52,7 +61,6 @@ Benshi Amazon Channel
 Bet+
 Bet+ Amazon Channel
 Bioskop Online
-Blim
 Blockbuster
 Bloody Movies Amazon Channel
 BluTV Amazon Channel
@@ -62,8 +70,9 @@ Boomerang Amazon Channel
 BoxOffice
 BritBox
 BritBox Amazon Channel
+Britbox Apple TV Channel 
 BroadwayHD
-C More
+BrutX Amazon Channel
 CBC Gem
 CBS
 CG Collection Amazon channel
@@ -75,14 +84,17 @@ Canal VOD
 Canal+
 Catchplay
 Chai Flicks
+Channel 4
 Chili
 Cine Comico Amazon Channel
+CineAutore Amazon Channel
 CineMember
 Cineasterna
 Cinema of Hearts Amazon Channel
 Cinemas a la Demande
 Cinemax Amazon Channel
 Cineplex
+Cineverse
 Cinépolis KLIC
 Claro video
 Classix
@@ -95,8 +107,8 @@ Crave
 Crave Starz
 Criterion Channel
 Crunchyroll
+Crunchyroll Amazon Channel
 Cultpix
-Curia
 Curiosity Stream
 CuriosityStream Amazon Channel
 Curzon Amazon Channel
@@ -107,11 +119,12 @@ DOCSVILLE
 DRTV
 Dansk Filmskat
 Darkmatter TV
-Das Erste Mediathek
 Dekkoo
-Discovery Plus
-Discovery Plus Amazon Channel
+Discovery+
+Discovery+ Amazon Channel
 Disney Plus
+DisneyNOW
+DistroTV
 Dizi Amazon Channel
 DocAlliance Films
 DocPlay
@@ -120,15 +133,12 @@ Dogwoof On Demand
 Dove Channel
 Draken Films
 EPIC ON
-EPIX Amazon Channel
-ESPN Plus
 Edisonline
 Elisa Viihde
-Epix
-Epix Roku Premium Channel
 Eros Now
 Eros Now Amazon Channel
 Eventive
+FILMO
 FILMRISE
 FXNow
 Fandor
@@ -140,16 +150,18 @@ Film1
 FilmBox Live Amazon Channel
 FilmBox+
 Filme Filme
+Filmicca
 Filmin
 Filmin Latino
 Filmin Plus
 Filmlegenden Amazon Channel
 Filmo Amazon Channel
-Filmo TV
 Filmoteket
+Filmow
 Filmstriben
 Filmtastic
 Filmtastic Amazon Channel
+Filmtastic bei Canal+
 Filmzie
 Flix Premiere
 FlixFling
@@ -158,7 +170,7 @@ FlixOlé Amazon Channel
 Foxtel Now
 France TV
 Freeform
-Freevee Amazon Channel
+Freevee
 Full Action Amazon Channel
 Full Moon Amazon Channel
 Funimation Now
@@ -172,18 +184,18 @@ GuideDoc
 HBO
 HBO Go
 HBO Max
-HBO Max Amazon Channel
 HBO Max Free
 HBO Poland
 HRTi
 Hallmark Movies
 Hallmark Movies Now Amazon Channel
+Hallmark Movies and Mysteries
 Hallmark TV Amazon Channel
-Hayu Amazon Channel
 Here TV
 Hi-YAH
 HiDive
 Historia y Actualidad Amazon Channel
+History
 History Play
 History Vault
 Hoichoi
@@ -194,22 +206,21 @@ Home of Horror
 Home of Horror Amazon Channel
 Hoopla
 Horizon
-Horrify
 Hotstar
 Hotstar Disney+
 Hulu
 Hungama Play
 IFC Amazon Channel
 IFFR Unleashed
-ILLICO
 INA  madelen Amazon Channel
 IPLA
 IROKOTV
+ITV Amazon Channel
 ITVX
 Icon Film Amazon Channel
 IndieFlix
-Infinity
 Infinity Selection Amazon Channel
+Infinity+
 Insomnia Amazon Channel
 Ivi
 Jio Cinema
@@ -221,9 +232,9 @@ Kanopy
 Kino Now
 Kino on Demand
 KinoPop
+Kinobox
 Kinopoisk
 Kirjastokino
-Kividoo
 Klassiki
 Klik Film
 Knowledge Network
@@ -233,6 +244,7 @@ LINE TV
 La Toile
 LaCinetek
 Laugh Out Loud
+Lepsi TV
 Libreflix
 Lifetime
 Lifetime Movie Club
@@ -244,20 +256,29 @@ Love Nature Amazon Channel
 Love and Passion Amazon Channel
 MAX Stream
 MGM Amazon Channel
+MGM Plus
+MGM Plus Amazon Channel
+MGM Plus Roku Premium Channel
+MIDNIGHT FACTORY Amazon Channel
 MTV Plus Amazon Channel
 MUBI
 MUBI Amazon Channel
 MX Player
 MZ Choice Amazon Channel
 Magellan TV
+Magenta TV
 MagentaTV
 Magnolia Selects
 ManoramaMax
-Mediaset Play
+Max
+Max Amazon Channel
+Mediaset Infinity
 Meo
 Metrograph
 Microsoft Store
+Midnight Pulp
 Mitele 
+Molotov TV
 More TV
 MotorTrend Amazon Channel
 MovieSaints
@@ -268,8 +289,10 @@ My5
 NFB
 NLZIET
 NOW
+NPO Plus
 NPO Start
 NRK TV
+National Geographic
 Naver Store
 Neon TV
 NetMovies
@@ -296,17 +319,19 @@ Okko
 Oldflix
 Orange VOD
 Otta
+Outside Watch
 OzFlix
 PBS
 PBS Kids Amazon Channel
 PBS Masterpiece Amazon Channel
 Pantaflix
 Pantaya
-Pantaya Amazon Channel
 Paramount Plus
+Paramount Plus Apple TV Channel 
 Paramount+ Amazon Channel
 Paramount+ Roku Premium Channel
-Paramount+ Showtime
+Paramount+ with Showtime
+Pass Warner Amazon Channel
 Pathé Thuis
 Paus
 Peacock
@@ -317,6 +342,7 @@ Planet Horror Amazon Channel
 Play Suisse
 Player
 Plex
+Plex Player
 Pluto TV
 Pokémon Amazon Channel
 Pongalo Amazon Channel  
@@ -324,6 +350,7 @@ Popcornflix
 Popcorntimes
 Popflick
 Premier
+Prima Plus
 Public Domain Movies
 Pure Flix
 QFT Player
@@ -331,6 +358,7 @@ QubitTV
 Quickflix
 Quickflix Store
 RTBF
+RTL Crime Amazon Channel
 RTL Passion Amazon Channel
 RTL Play
 RTL+
@@ -338,19 +366,21 @@ RTPplay
 Rai Play
 Rakuten TV
 Rakuten Viki
+Raro Video Amazon Channel
 Realeyz Amazon Channel
 Redbox
+Reserva Imovision
 Retrocrush
+Reveel
 Revry
+Runtime
 Ruutu
-SALTO
 SBS On Demand
 SF Anytime
 STARZPLAY
 STUDIOCANAL PRESENTS Apple TV Channel
 STV Player
 SVT
-Salto Amazon Channel
 Screambox
 Screambox Amazon Channel
 Shadowz
@@ -363,6 +393,7 @@ Shout! Factory TV
 ShowMax
 Showtime
 Showtime Amazon Channel
+Showtime Apple TV Channel
 Showtime Roku Premium Channel
 Shudder
 Shudder Amazon Channel
@@ -373,7 +404,6 @@ Sky Go
 Sky Store
 Sky X
 SkyShowtime
-Sling TV Orange and Blue
 Smithsonian Channel
 Smithsonian Channel Amazon Channel
 Sony AXN Amazon Channel
@@ -387,13 +417,13 @@ Stan
 Star Plus
 Starz
 Starz Amazon Channel
+Starz Apple TV Channel
 Starz Play Amazon Channel
 Starz Roku Premium Channel
 Strim
 Studiocanal Presents ALLSTARS Amazon Channel
 Studiocanal Presents Amazon Channel
 Studiocanal Presents MOVIECULT Amazon Channel
-SumoTV
 Sun Nxt
 Sundance Now
 Sundance Now Amazon Channel
@@ -408,13 +438,16 @@ TNT
 TNTGo
 TOD
 TV 2
+TV 2 Play
+TV4
+TV4 Play
 TVCortos Amazon Channel
-TVF Play
 TVNZ
 Takflix
 Tata Play
 Tele2 Play
 Telecine Play
+Telenet
 Telia Play
 Telstra TV
 Tenk
@@ -423,6 +456,7 @@ The Film Detective
 The Roku Channel
 ThreeNow
 Timvision
+Tivify
 Topic
 TriArt Play
 True Story
@@ -430,10 +464,13 @@ Tubi TV
 Turk On Video Amazon Channel
 TvIgle
 U-NEXT
+UAM TV
 UMC Amazon Channel
 UPC TV
 USA Network
+Univer Video
 Universal Pictures
+Universal+ Amazon Channel
 Universcine
 Universcine Amazon Channel
 Urban Movie Channel
@@ -442,7 +479,6 @@ VIX
 VOD Club
 VOD Poland
 VRT MAX
-VRV
 VUDU Free
 VVVVID
 Viaplay
@@ -459,7 +495,6 @@ Voot
 Voyo
 Vudu
 W4free
-WAKANIM
 WOW
 WOW Presents Plus
 WWE Network
@@ -467,6 +502,7 @@ Watcha
 Watchbox
 WeTV
 Wink
+Xumo Play
 Yelo Play
 Yle Areena
 Yorck on Demand
@@ -479,6 +515,7 @@ ZDF Herzkino Amazon Channel
 Zee5
 Ziggo TV
 aha
+alleskino Amazon Channel
 blue TV
 blutv
 dTV
@@ -495,6 +532,7 @@ iciTouTV
 iflix
 maxdome Store
 meJane
+myfilmfriend
 puhutv
 realeyz
 rtve

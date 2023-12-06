@@ -10,10 +10,10 @@ if not config['tmdb']['api_key']:
 
 tmdbHeaders = {'Content-Type': 'application/json'}
 
-tmdbResponseRegions = requests.get('https://api.themoviedb.org/3/watch/providers/regions?api_key='+config["tmdbApiKey"], headers=tmdbHeaders)
+tmdbResponseRegions = requests.get('https://api.themoviedb.org/3/watch/providers/regions?api_key='+config['tmdb']['api_key'], headers=tmdbHeaders)
 tmdbRegions = tmdbResponseRegions.json()
 
-tmdbResponseProviders = requests.get('https://api.themoviedb.org/3/watch/providers/movie?api_key='+config["tmdbApiKey"], headers=tmdbHeaders)
+tmdbResponseProviders = requests.get('https://api.themoviedb.org/3/watch/providers/movie?api_key='+config['tmdb']['api_key'], headers=tmdbHeaders)
 tmdbProviders = tmdbResponseProviders.json()
 
 with open(os.path.join(script_directory, 'res', 'regions.txt'), 'w', encoding='utf-8') as f:
