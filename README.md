@@ -21,7 +21,6 @@ Why not? What you do with this information is up to you. You might want to remov
 - Rename `config.yaml.example` to `config.yaml`
 - Edit `config.yaml` as per the table below
 - Run `python elsewherr.py`, or `run.bat` to run the script to run the Radarr script.
-- Run `python sonarr.py` to run the script to run the Sonarr script.
 
 You might want to setup a scheduled task or something to run this regularly to keep the list up to date as moves are added to or drop off streaming services.
 
@@ -29,12 +28,11 @@ You might want to setup a scheduled task or something to run this regularly to k
 
 |Parameter|Description|
 |---|---|
-|tmdbApiKey|API Key for The Movie Database|
+|ApiKey|API Key for The Movie Database/Radarr/Sonarr/Gotify|
 |providerRegion|2 digit region code to use to check the availability of movies on that regions streaming service. The `providers.txt` file contains a list of codes|
-|radarrApiKey|Your API key for Radarr|
 |radarrUrl|Full URL including port to Radarr|
-|sonarrApiKey|Your API key for Sonarr|
 |sonarrUrl|Full URL including port to Sonarr|
+|monitor|Unmonitor movies/shows|
 |requiredProviders|List of the providers you would like to search for. Providers must be entered *exactly* as they appear in the Providers list from TMDb to work. |
 |tagPrefix|Prefix that will be included in the tags added to Radarr and/or Sonarr|
 
@@ -42,7 +40,7 @@ A list of Regions and Providers is available in `providers.txt`, but you can als
 
 **Logging/Debugging**
 
-By default Elsewherr will log all INFO logs out to `elsewhere.log` or `sonarr.log`. If you incluide the '-d' or '--debug' argument when running the script (i.e. `python elsewherr.py -d` or `python elsewherr.py --debug`) it will up the logging to DEBUG and output much more information to the logs.
+By default Elsewherr will log all INFO logs out to `elsewhere.log`. If you incluide the '-d' or '--debug' argument when running the script (i.e. `python elsewherr.py -v` or `python elsewherr.py --verbose`) it will up the logging to DEBUG and output much more information to the logs.
 
 The log file is overwritten each time the script is run.
 
