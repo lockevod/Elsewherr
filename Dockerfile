@@ -1,4 +1,4 @@
-FROM python:3.18-alpine
+FROM python:3.11-alpine
 
 WORKDIR /usr/src/app
 ENV PYTHONDONTWRITEBYTECODE 1

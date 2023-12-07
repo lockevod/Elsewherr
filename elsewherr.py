@@ -6,6 +6,7 @@ import re
 from pyarr import SonarrAPI, RadarrAPI
 from tmdbv3api import TMDb, Find, Movie, TV
 import yaml
+import threading
 
 def get_args():
     parser = argparse.ArgumentParser()
@@ -61,7 +62,7 @@ def process_radarr():
     all_tags = radarr.get_tag()
     tags_id_to_label = dict((tag['id'], tag['label']) for tag in all_tags)
     tags_label_to_id = dict((tag['label'], tag['id']) for tag in all_tags)
-
+    
     for movie in movies:
         try:
             logger.debug('--------------------------------------------------')
