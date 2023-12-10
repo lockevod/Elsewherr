@@ -36,7 +36,7 @@ def setup(args):
     logger.info('Elsewherr starting.')
     logger.debug('DEBUG Logging Enabled')
     logger.debug('Loading Config and setting the list of required Providers')
-    config = yaml.safe_load(open(os.path.join(dir, 'config.yaml')))
+    config = yaml.safe_load(open(os.path.join(dir,'config','config.yaml'))) 
     logger.debug(config)
 
     tmdb = TMDb()
@@ -71,14 +71,8 @@ def process_radarr():
             tags_list = list(filter(lambda x: not tags_id_to_label.get(x).startswith(config['prefix'].lower()), movie['tags']))
             movietmdb=Movie()
             
-            #providers = movietmdb.watch_providers(movie['tmdbId'])['results']
-            #providers = Movie().watch_providers(movie['tmdbId'])['results'].get(config['tmdb']['region'], {}).get('flatrate', [])
-
-            #providers = movietmdb.watch_providers(movie['tmdbId'])['results']
             providers = movietmdb.watch_providers(movie['tmdbId'])['results']._json[config['tmdb']['region']]['flatrate']
 
-           # if (providers):
-            #    providers=providers._json['ES']['flatrate']
             for provider in providers:
                 provider_name = provider['provider_name']
                 logger.debug('Provider: %s' % provider_name)
